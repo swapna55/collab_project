@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="myApp">
+	<div id="header">
+		<div style="background-color: aqua;">
+			<!-- <ul id="navigation">
+				<li class="selected"><a href="#blog">BLOG</a></li>
+				<li class="selected"><a href="#addblog">ADD BLOG</a></li>
+				<li class="selected"><a href="#forum">FOURM</a></li>
+				<li class="selected"><a href="/spring-mvc-chat" target="_blank">CHAT</a></li>
+			</ul>
+ -->		</div>
+	</div>
+	<div id="body">
+		<div class="header">
+			<div>
+				<h1>Blog</h1>
+			</div>
+		</div>
+		<div>
+			<form>
+				<div ng-controller="BlogControl as ctrl">
+					<div class="footer" style="border-color: blue; border-style: solid; border-width: 2; width: 700px; margin-left: 200px;">						
+					<p>
+							<span style="text-align: center; font-size: large;"
+								ng-bind="ctrl.blog1.blogtitle"></span>
+						</p>
+						<span style="text-align: justify;" ng-bind="ctrl.blog1.blogpostcontent"></span>
+						<p>
+							USER NAME:<span style="text-align: left;" ng-bind="ctrl.blog.id"></span>
+						</p>
+						<p>
+							Date: <span style="text-align: right;" ng-bind="ctrl.blog.date"></span>
+						</p>						
+					</div>
+				</div>
+			</form>
+			</div>
+			</div>
+			<!-- <div ng-view></div>
+	
+	<script src="app.js"></script>
+	<script src="BlogService.js"></script>
+	<script src="BlogController.js"></script>
+	 -->		</body>
+			</html>

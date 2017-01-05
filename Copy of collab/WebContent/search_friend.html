@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>searching friend</title>
+</head>
+<body>
+<div class="container" ng-controller="FriendController as ctrl">
+
+	<p>
+	<p>
+	<p>
+	<p>
+	
+	<p>
+	<p>
+	<p>
+	<p>
+	
+	<div class="form-group has-feedback"></div>
+
+  Search
+
+  <p><input type="text" ng-model="search_text"></p>
+
+
+	<div ng-repeat="userdetails in ctrl.users | filter: search_text">
+
+		<fieldset>
+			<legend></legend>
+			
+			<p>Online ?: {{userdetails.is_online}}  
+
+			<p>ID: {{userdetails.userid}} &nbsp; &nbsp;&nbsp; Name: {{userdetails.username}}
+			    &nbsp; &nbsp;&nbsp;  <button type="button"  ng-click="ctrl.sendFriendRequest(userdetails.userid)" 
+			       class="btn btn-warning btn-sm">Send Friend Request</button>
+			  </p>
+
+			<p>Email: {{userdetails.email}} &nbsp; &nbsp;&nbsp; Mobile:{{userdetails.contact}}</p>
+
+			<p> Address:{{userdetails.address}} &nbsp; &nbsp;&nbsp; Role :{{userdetails.role}}</p>
+		</fieldset>
+	</div>
+
+
+</div>
+
+</body>
+</html>
